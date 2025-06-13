@@ -9,8 +9,9 @@ def generate_podcast(payload):
     news_category = payload["news_category"]
     music_genre = payload["music_genre"]
     user_description = payload.get("description", "")
+    duration = payload.get("duration")
 
-    segments = generate_outline_and_descriptions(topic, user_description)
+    segments = generate_outline_and_descriptions(topic, user_description, duration)
     news_weather = {
         "news": get_local_news(location, news_category),
         "weather": get_weather_info(location)

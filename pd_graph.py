@@ -49,7 +49,7 @@ def generate_segments_node(state: PodcastState) -> PodcastState:
     }
 
 def controller_node(state: PodcastState) -> PodcastState:
-    episodes = generate_outline_and_descriptions(state["topic"], state["description"])
+    episodes = generate_outline_and_descriptions(state["topic"], state["description"], duration=state["duration"])
     return {**state, "segment_descriptions": episodes}
 
 def build_podcast_graph():

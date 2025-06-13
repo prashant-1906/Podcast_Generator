@@ -7,11 +7,11 @@ app = FastAPI(title="Podcast Generator API")
 class PodcastRequest(BaseModel):
     topic: str
     description: str = ""
-    username: str = "User"
+    username: str 
     user_address: str
-    duration_minutes: int = 30
-    news_category: str = "technology"
-    music_genre: str = "lofi"
+    duration: int
+    news_category: str 
+    music_genre: str
 
 @app.post("/generate-podcast")
 async def generate(req: PodcastRequest):

@@ -5,7 +5,7 @@ class PodcastState(TypedDict):
     description: str
     username: str
     user_address: str
-    duration_minutes: int
+    duration: int
     
     research_data: str
     

@@ -23,7 +23,7 @@ def main():
         "description": args.description,
         "username": args.username,
         "user_address": args.location,
-        "duration_minutes": args.duration,
+        "duration": args.duration,
         "news_category": args.news_category,
         "music_genre": args.music_genre
     }

@@ -9,6 +9,7 @@ def generate_outline_and_descriptions(topic, description):
     prompt = controller_prompt.format(
         topic=topic,
         description=description,
+        duration="",
         schema=schema_str
     )
     response = llm.invoke(prompt)

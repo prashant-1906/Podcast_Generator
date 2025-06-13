@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 JAMENDO_CLIENT_ID = os.getenv("JAMENDO_CLIENT_ID")
 
-def get_music_track(genre: str = "lofi") -> str:
+def get_music_track(genre: str) -> str:
     try:
         if not JAMENDO_CLIENT_ID:
             return "Jamendo API key not configured."
